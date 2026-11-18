@@ -1,0 +1,173 @@
+
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Aplikasi Kasir Pintar</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div>
+            <h1>🛒 KASIR PINTAR</h1>
+            <p>Sistem Kasir Penjualan</p>
+        </div>
+        <div id="tanggalHari"></div>
+    </header>
+
+    <main class="container">
+
+        <!-- DASHBOARD -->
+        <section class="dashboard">
+
+            <div class="card omzet">
+                <p>💰 Omzet Hari Ini</p>
+                <h2 id="totalOmzet">Rp0</h2>
+            </div>
+
+            <div class="card transaksi">
+                <p>🧾 Transaksi Hari Ini</p>
+                <h2 id="jumlahTransaksi">0</h2>
+            </div>
+
+            <div class="card barang">
+                <p>📦 Barang Terjual Hari Ini</p>
+                <h2 id="jumlahBarang">0</h2>
+            </div>
+
+        </section>
+
+        <div class="layout">
+
+            <!-- DAFTAR PRODUK -->
+            <section class="panel produk-panel">
+
+                <h2>Daftar Produk</h2>
+
+                <input
+                    type="search"
+                    id="cariProduk"
+                    placeholder="Cari nama produk..."
+                >
+
+                <div class="produk-grid" id="daftarProduk"></div>
+
+            </section>
+
+            <!-- KERANJANG -->
+            <section class="panel keranjang-panel">
+
+                <h2>Keranjang Belanja</h2>
+
+                <div class="table-wrapper">
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Produk</th>
+                                <th>Harga</th>
+                                <th>Qty</th>
+                                <th>Aksi</th>
+                            </tr>
+                        </thead>
+
+                        <tbody id="daftarKeranjang"></tbody>
+                    </table>
+                </div>
+
+                <div class="ringkasan">
+
+                    <div class="baris-total">
+                        <span>Subtotal</span>
+                        <strong id="subtotal">Rp0</strong>
+                    </div>
+
+                    <label for="diskon">Diskon (Rp)</label>
+                    <input
+                        type="number"
+                        id="diskon"
+                        min="0"
+                        value="0"
+                    >
+
+                    <div class="baris-total total">
+                        <span>Total Bayar</span>
+                        <strong id="totalBayar">Rp0</strong>
+                    </div>
+
+                    <label for="uangBayar">Uang Pelanggan (Rp)</label>
+                    <input
+                        type="number"
+                        id="uangBayar"
+                        min="0"
+                        placeholder="Masukkan uang pelanggan"
+                    >
+
+                    <div class="baris-total kembalian">
+                        <span>Kembalian</span>
+                        <strong id="uangKembali">Rp0</strong>
+                    </div>
+
+                    <button id="tombolBayar" class="btn-bayar">
+                        BAYAR SEKARANG
+                    </button>
+
+                    <button id="tombolKosongkan" class="btn-kosong">
+                        Kosongkan Keranjang
+                    </button>
+
+                </div>
+
+            </section>
+
+        </div>
+
+        <!-- RIWAYAT TRANSAKSI -->
+        <section class="panel">
+
+            <h2>Riwayat Transaksi</h2>
+
+            <div class="table-wrapper">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>No. Transaksi</th>
+                            <th>Tanggal</th>
+                            <th>Total</th>
+                            <th>Bayar</th>
+                            <th>Kembalian</th>
+                        </tr>
+                    </thead>
+
+                    <tbody id="riwayatTransaksi"></tbody>
+                </table>
+            </div>
+
+        </section>
+
+        <!-- CETAK STRUK -->
+        <section class="panel struk" id="areaStruk" hidden>
+            <h2>Struk Pembayaran</h2>
+
+            <div id="isiStruk"></div>
+
+            <button id="tombolCetak" class="btn-bayar">
+                Cetak Struk
+            </button>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Aplikasi Kasir Pintar © 2026</p>
+        <p>Dibuat menggunakan HTML, CSS, dan JavaScript</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>

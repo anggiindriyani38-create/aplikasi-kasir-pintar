@@ -1,0 +1,327 @@
+
+/* DASAR */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f2f6f3;
+    color: #26352b;
+}
+
+/* HEADER */
+.header {
+    background: #176b3a;
+    color: white;
+    padding: 24px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+}
+
+.header h1 {
+    margin-bottom: 8px;
+}
+
+.header p {
+    color: #d9ecdf;
+    font-size: 14px;
+}
+
+/* CONTAINER */
+.container {
+    width: 94%;
+    max-width: 1300px;
+    margin: 25px auto;
+}
+
+/* DASHBOARD */
+.dashboard {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 18px;
+    margin-bottom: 25px;
+}
+
+.card {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    border-left: 5px solid #176b3a;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.card p {
+    color: #777;
+    margin-bottom: 12px;
+    font-size: 14px;
+}
+
+.card h2 {
+    font-size: 24px;
+    overflow-wrap: anywhere;
+}
+
+.transaksi {
+    border-left-color: #2789c8;
+}
+
+.barang {
+    border-left-color: #d99b26;
+}
+
+/* LAYOUT */
+.layout {
+    display: grid;
+    grid-template-columns: 1.1fr 0.9fr;
+    gap: 20px;
+    align-items: start;
+}
+
+/* PANEL */
+.panel {
+    background: white;
+    padding: 23px;
+    border-radius: 12px;
+    margin-bottom: 22px;
+    box-shadow: 0 3px 10px rgba(0,0,0,0.05);
+}
+
+.panel h2 {
+    margin-bottom: 20px;
+    font-size: 20px;
+}
+
+/* INPUT */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #d8e1da;
+    border-radius: 7px;
+    font-size: 14px;
+    margin: 8px 0;
+}
+
+input:focus {
+    outline: 2px solid #a3cdb0;
+}
+
+/* PRODUK */
+.produk-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 12px;
+    margin-top: 15px;
+}
+
+.produk-item {
+    border: 1px solid #e0e9e2;
+    border-radius: 10px;
+    padding: 15px;
+    background: #fbfdfb;
+}
+
+.produk-item h3 {
+    font-size: 15px;
+    margin: 8px 0;
+}
+
+.produk-item p {
+    color: #176b3a;
+    font-weight: bold;
+    margin-bottom: 12px;
+}
+
+.produk-emoji {
+    font-size: 30px;
+}
+
+.produk-item button {
+    width: 100%;
+}
+
+/* TOMBOL */
+button {
+    border: none;
+    background: #176b3a;
+    color: white;
+    padding: 10px 13px;
+    border-radius: 7px;
+    cursor: pointer;
+    font-size: 13px;
+}
+
+button:hover {
+    opacity: 0.85;
+}
+
+.btn-bayar {
+    width: 100%;
+    padding: 14px;
+    margin-top: 15px;
+    font-weight: bold;
+    background: #176b3a;
+}
+
+.btn-kosong {
+    width: 100%;
+    margin-top: 9px;
+    background: #d64d4d;
+}
+
+.btn-tambah,
+.btn-kurang {
+    padding: 5px 9px;
+    margin: 2px;
+}
+
+/* TABEL */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    min-width: 480px;
+}
+
+th, td {
+    text-align: left;
+    padding: 12px 8px;
+    border-bottom: 1px solid #e8eee9;
+    font-size: 13px;
+}
+
+th {
+    background: #eaf3ec;
+    color: #176b3a;
+}
+
+.kosong {
+    text-align: center;
+    padding: 25px;
+    color: #888;
+}
+
+/* RINGKASAN */
+.ringkasan {
+    margin-top: 20px;
+    border-top: 1px solid #e6ece7;
+    padding-top: 15px;
+}
+
+.baris-total {
+    display: flex;
+    justify-content: space-between;
+    gap: 10px;
+    margin: 12px 0;
+}
+
+.total {
+    border-top: 1px dashed #aaa;
+    padding-top: 14px;
+    color: #176b3a;
+    font-size: 18px;
+}
+
+.kembalian {
+    color: #176b3a;
+    font-weight: bold;
+}
+
+/* STRUK */
+.struk {
+    max-width: 550px;
+}
+
+.struk-kertas {
+    border: 1px dashed #aaa;
+    padding: 20px;
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.struk-kertas h3,
+.struk-kertas .tengah {
+    text-align: center;
+}
+
+.struk-kertas .garis {
+    border-top: 1px dashed #888;
+    margin: 10px 0;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 22px;
+    color: #888;
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+[hidden] {
+    display: none !important;
+}
+
+/* RESPONSIVE */
+@media (max-width: 850px) {
+    .layout {
+        grid-template-columns: 1fr;
+    }
+
+    .dashboard {
+        grid-template-columns: 1fr;
+    }
+}
+
+@media (max-width: 500px) {
+    .header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .container {
+        width: 95%;
+    }
+
+    .panel {
+        padding: 16px;
+    }
+
+    .produk-grid {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+/* CETAK STRUK */
+@media print {
+    body * {
+        visibility: hidden;
+    }
+
+    #areaStruk,
+    #areaStruk * {
+        visibility: visible;
+    }
+
+    #areaStruk {
+        display: block !important;
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        box-shadow: none;
+        border: none;
+    }
+
+    #tombolCetak {
+        display: none;
+    }
+}
